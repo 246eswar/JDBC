@@ -17,10 +17,12 @@ public class SimpleProject {
 		Connection con=DriverManager.getConnection(url,user,password);
 		Statement stmt=con.createStatement() ;
 		String createTable="create table if not exists facutly(fac_id int primary key,name varchar(100))";
+		String alterTable="alter table  facutly add column salary int  ";
 		System.out.println("table Created");
 		//create a statement
-		stmt.executeUpdate(createTable);
+		stmt.executeUpdate(alterTable);
 		//processing
+		
 		
 		//close connection
 		if(con!=null) {
